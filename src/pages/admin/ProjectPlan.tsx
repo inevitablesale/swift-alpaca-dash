@@ -47,17 +47,17 @@ const milestones: Milestone[] = [
       'Aggregate jobs from multiple sources into a single feed.',
       'AI matching delivers highly relevant job recommendations.',
       'Core platform is free for all job seekers.',
-      'Enable initial candidate outreach via Phantombuster.',
+      'Invite candidates to the platform to see relevant jobs using Phantombuster.',
     ],
   },
   {
-    title: 'V1: Core Platform & Profile System',
+    title: 'V1: Candidate Intelligence Engine - Core Build',
     date: 'Target: July 29, 2025',
     successMetrics: [
-      'Candidates can sign up and create their own profiles.',
+      'Candidates can sign up and create profiles, forming our proprietary dataset.',
       'Implement robust data models for user-created candidate and company profiles.',
-      'API Orchestration Layer is functional for managing internal platform data.',
-      'Basic job posting functionality is live.',
+      'API Orchestration Layer is functional for managing and searching internal platform data.',
+      'Basic job posting functionality is live to connect candidates with opportunities.',
     ],
   },
   {
