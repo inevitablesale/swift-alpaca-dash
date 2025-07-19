@@ -19,7 +19,7 @@ const AdminLayout = () => {
           </AdminNavLink>
         </nav>
       </aside>
-      <main className="flex-1 overflow-auto bg-white">
+      <main className="flex-1 flex flex-col overflow-hidden bg-white">
         <Outlet />
       </main>
     </div>
