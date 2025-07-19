@@ -17,11 +17,11 @@ interface IntegrationCardProps {
 
 const getMilestoneVariant = (milestone: string): "default" | "secondary" | "outline" | "destructive" => {
   switch (milestone.toLowerCase()) {
-    case 'mvp':
+    case 'now':
       return 'default';
-    case 'v1':
+    case 'next':
       return 'secondary';
-    case 'future':
+    case 'later':
       return 'outline';
     default:
       return 'outline';
@@ -44,7 +44,7 @@ const IntegrationCard = ({ name, Icon, milestones = [] }: IntegrationCardProps) 
               </Badge>
             ))
           ) : (
-            <Badge variant="outline">Coming Soon</Badge>
+            <Badge variant="outline">Later</Badge>
           )}
         </div>
       </CardContent>

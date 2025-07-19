@@ -8,40 +8,40 @@ import {
 import { Briefcase, Linkedin, Github, Bot, Mail, BrainCircuit, Twitter, Users, GitMerge, CreditCard, Shield } from "lucide-react";
 
 const coreArchitecture = [
-    { name: "Multi-Tenant Structure", icon: Users, milestones: ['MVP'] },
-    { name: "Security & Scalability Foundations", icon: Shield, milestones: ['MVP', 'V1', 'Future'] },
-    { name: "API Orchestration Layer", icon: GitMerge, milestones: ['V1'] },
-    { name: "Usage Tracking & Credit System", icon: CreditCard, milestones: ['V1'] },
+    { name: "Multi-Tenant Structure", icon: Users, milestones: ['Now'] },
+    { name: "Security & Scalability Foundations", icon: Shield, milestones: ['Now', 'Next', 'Later'] },
+    { name: "API Orchestration Layer", icon: GitMerge, milestones: ['Next'] },
+    { name: "Usage Tracking & Credit System", icon: CreditCard, milestones: ['Next'] },
 ];
 
 const atsIntegrations = [
-  { name: "Greenhouse", icon: Briefcase, milestones: ['V1'] },
-  { name: "Lever", icon: Briefcase, milestones: ['V1'] },
-  { name: "Ashby", icon: Briefcase, milestones: ['Future'] },
-  { name: "Workable", icon: Briefcase, milestones: ['Future'] },
-  { name: "SmartRecruiters", icon: Briefcase, milestones: ['Future'] },
-  { name: "Recruitee", icon: Briefcase, milestones: ['Future'] },
-  { name: "BreezyHR", icon: Briefcase, milestones: ['Future'] },
+  { name: "Greenhouse", icon: Briefcase, milestones: ['Next'] },
+  { name: "Lever", icon: Briefcase, milestones: ['Next'] },
+  { name: "Ashby", icon: Briefcase, milestones: ['Later'] },
+  { name: "Workable", icon: Briefcase, milestones: ['Later'] },
+  { name: "SmartRecruiters", icon: Briefcase, milestones: ['Later'] },
+  { name: "Recruitee", icon: Briefcase, milestones: ['Later'] },
+  { name: "BreezyHR", icon: Briefcase, milestones: ['Later'] },
 ];
 
 const dataIntegrations = [
-  { name: "LinkedIn Scraper (RapidAPI)", icon: Linkedin, milestones: ['V1'] },
-  { name: "GitHub", icon: Github, milestones: ['Future'] },
-  { name: "Twitter / X", icon: Twitter, milestones: ['Future'] },
+  { name: "LinkedIn Scraper (RapidAPI)", icon: Linkedin, milestones: ['Next'] },
+  { name: "GitHub", icon: Github, milestones: ['Later'] },
+  { name: "Twitter / X", icon: Twitter, milestones: ['Later'] },
 ];
 
 const automationIntegrations = [
-  { name: "Phantombuster", icon: Bot, milestones: ['V1'] },
+  { name: "Phantombuster", icon: Bot, milestones: ['Next'] },
 ];
 
 const aiIntegrations = [
-  { name: "OpenAI", icon: Bot, milestones: ['MVP'] },
-  { name: "Mistral", icon: BrainCircuit, milestones: ['V1'] },
+  { name: "OpenAI", icon: Bot, milestones: ['Now'] },
+  { name: "Mistral", icon: BrainCircuit, milestones: ['Next'] },
 ];
 
 const productivityIntegrations = [
-  { name: "Google Workspace", icon: Mail, milestones: ['V1'] },
-  { name: "Microsoft 365", icon: Mail, milestones: ['Future'] },
+  { name: "Google Workspace", icon: Mail, milestones: ['Next'] },
+  { name: "Microsoft 365", icon: Mail, milestones: ['Later'] },
 ];
 
 const Integrations = () => {
