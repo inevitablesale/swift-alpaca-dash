@@ -14,8 +14,6 @@ const coreArchitecture: Integration[] = [
     { name: "User Registration & Profiles", icon: Users, milestones: ['MVP'] },
     { name: "Company Profile System", icon: Briefcase, milestones: ['V1.1'] },
     { name: "Basic Job Posting", icon: FileText, milestones: ['V1'] },
-    { name: "Multi-Tenant Structure", icon: Users, milestones: ['MVP'] },
-    { name: "Security & Scalability Foundations", icon: Shield, milestones: ['MVP', 'V1'] },
     { name: "API Orchestration Layer", icon: GitMerge, milestones: ['V1'] },
     { name: "Usage Tracking & Credit System", icon: CreditCard, milestones: ['V1.1'] },
 ];
