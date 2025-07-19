@@ -1,6 +1,6 @@
 import IntegrationCard from "@/components/admin/IntegrationCard";
 import ProjectPlanColumn from "@/components/admin/ProjectPlanColumn";
-import { Briefcase, Linkedin, Github, Bot, Mail, BrainCircuit, Twitter, Users, GitMerge, CreditCard, Shield, LucideProps } from "lucide-react";
+import { Briefcase, Linkedin, Github, Bot, Mail, BrainCircuit, Twitter, Users, GitMerge, CreditCard, Shield, LucideProps, Database, FileText } from "lucide-react";
 
 interface Integration {
   name: string;
@@ -11,52 +11,56 @@ interface Integration {
 }
 
 const coreArchitecture: Integration[] = [
+    { name: "User Registration & Profiles", icon: Users, milestones: ['MVP'] },
+    { name: "Company Profile System", icon: Briefcase, milestones: ['MVP'] },
+    { name: "Basic Job Posting", icon: FileText, milestones: ['MVP'] },
     { name: "Multi-Tenant Structure", icon: Users, milestones: ['MVP'] },
-    { name: "Security & Scalability Foundations", icon: Shield, milestones: ['MVP', 'V1', 'V1.1'] },
+    { name: "Security & Scalability Foundations", icon: Shield, milestones: ['MVP', 'V1'] },
     { name: "API Orchestration Layer", icon: GitMerge, milestones: ['V1'] },
-    { name: "Usage Tracking & Credit System", icon: CreditCard, milestones: ['V1'] },
-];
-
-const atsIntegrations: Integration[] = [
-  { name: "Greenhouse", icon: Briefcase, milestones: ['V1'] },
-  { name: "Lever", icon: Briefcase, milestones: ['V1'] },
-  { name: "Ashby", icon: Briefcase, milestones: ['V1.1'] },
-  { name: "Workable", icon: Briefcase, milestones: ['V1.1'] },
-  { name: "SmartRecruiters", icon: Briefcase, milestones: ['V1.1'] },
-  { name: "Recruitee", icon: Briefcase, milestones: ['V1.1'] },
-  { name: "BreezyHR", icon: Briefcase, milestones: ['V1.1'] },
+    { name: "Usage Tracking & Credit System", icon: CreditCard, milestones: ['V1.1'] },
 ];
 
 const dataIntegrations: Integration[] = [
-  { name: "LinkedIn Scraper (RapidAPI)", icon: Linkedin, milestones: ['MVP'], cost: "$40.00/mo", requests: "15,000 Requests / Month" },
-  { name: "GitHub", icon: Github, milestones: ['V1.1'] },
-  { name: "Twitter / X", icon: Twitter, milestones: ['V1.1'] },
-];
-
-const automationIntegrations: Integration[] = [
-  { name: "Phantombuster", icon: Bot, milestones: ['V1'] },
+  { name: "People Data Labs (Companies & People)", icon: Database, milestones: ['V1'] },
+  { name: "LinkedIn Scraper (RapidAPI)", icon: Linkedin, milestones: ['V1'], cost: "$40.00/mo", requests: "15,000 Requests / Month" },
+  { name: "GitHub", icon: Github, milestones: ['V1.2'] },
+  { name: "Twitter / X", icon: Twitter, milestones: ['V1.3'] },
 ];
 
 const aiIntegrations: Integration[] = [
-  { name: "OpenAI", icon: Bot, milestones: ['MVP'] },
-  { name: "Mistral", icon: BrainCircuit, milestones: ['V1'] },
+  { name: "OpenAI", icon: Bot, milestones: ['V1'] },
+  { name: "Mistral", icon: BrainCircuit, milestones: ['V1.1'] },
+];
+
+const automationIntegrations: Integration[] = [
+  { name: "Phantombuster", icon: Bot, milestones: ['V1.2'] },
+];
+
+const atsIntegrations: Integration[] = [
+  { name: "Greenhouse", icon: Briefcase, milestones: ['V1.1'] },
+  { name: "Lever", icon: Briefcase, milestones: ['V1.1'] },
+  { name: "Ashby", icon: Briefcase, milestones: ['V1.2'] },
+  { name: "Workable", icon: Briefcase, milestones: ['V1.2'] },
+  { name: "SmartRecruiters", icon: Briefcase, milestones: ['V1.3'] },
+  { name: "Recruitee", icon: Briefcase, milestones: ['V1.3'] },
+  { name: "BreezyHR", icon: Briefcase, milestones: ['V1.3'] },
 ];
 
 const productivityIntegrations: Integration[] = [
-  { name: "Google Workspace", icon: Mail, milestones: ['V1'] },
-  { name: "Microsoft 365", icon: Mail, milestones: ['V1.1'] },
+  { name: "Google Workspace", icon: Mail, milestones: ['V1.1'] },
+  { name: "Microsoft 365", icon: Mail, milestones: ['V1.2'] },
 ];
 
 const allIntegrations = [
   ...coreArchitecture,
-  ...atsIntegrations,
   ...dataIntegrations,
-  ...automationIntegrations,
   ...aiIntegrations,
+  ...automationIntegrations,
+  ...atsIntegrations,
   ...productivityIntegrations,
 ];
 
-const milestoneOrder = ['MVP', 'V1', 'V1.1'];
+const milestoneOrder = ['MVP', 'V1', 'V1.1', 'V1.2', 'V1.3'];
 
 const integrationsByMilestone = milestoneOrder.reduce((acc, milestone) => {
   acc[milestone] = [];
