@@ -52,12 +52,12 @@ const milestones: Milestone[] = [
     ],
   },
   {
-    title: 'V1: Recruiter Toolkit Foundation',
+    title: 'V1: Candidate Intelligence Engine & Recruiter Beta',
     date: 'Target: July 29, 2025',
     successMetrics: [
-      'Onboard first 10 beta recruiters to gather feedback.',
-      'Recruiters can search the aggregated candidate pool.',
-      'Recruiters can post jobs directly to the platform.',
+      'Successfully integrate People Data Labs to build the core candidate database.',
+      'Onboard first 10 beta recruiters to test and provide feedback on candidate search.',
+      'Beta recruiters can perform effective searches and view detailed candidate profiles.',
       'Validate initial pricing model with the beta group.',
     ],
   },
