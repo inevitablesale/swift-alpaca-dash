@@ -1,5 +1,5 @@
 import MilestoneSection from "@/components/admin/MilestoneSection";
-import { Briefcase, Linkedin, Github, Bot, Mail, BrainCircuit, Twitter, Users, GitMerge, CreditCard, LucideProps, Database, Filter } from "lucide-react";
+import { Briefcase, Linkedin, Github, Bot, Mail, BrainCircuit, Twitter, Users, GitMerge, CreditCard, LucideProps, Database, Filter, Send } from "lucide-react";
 
 interface Integration {
   name: string;
@@ -17,9 +17,9 @@ interface Milestone {
 }
 
 const allIntegrations: Integration[] = [
-    { name: "LinkedIn Scraper (RapidAPI)", icon: Linkedin, milestone: 'MVP', tags: ['Job Sourcing'], cost: "$40.00/mo", requests: "15,000 Requests / Month" },
-    { name: "Job Aggregation Engine", icon: GitMerge, milestone: 'MVP', tags: ['Data Pipeline'] },
-    { name: "AI Job Matching (JobGPT)", icon: Bot, milestone: 'MVP', tags: ['Matching Engine'] },
+    { name: "LinkedIn Scraper (RapidAPI)", icon: Linkedin, milestone: 'MVP', tags: ['Candidate Sourcing'], cost: "$40.00/mo", requests: "15,000 Requests / Month" },
+    { name: "AI Candidate Ranking (JobGPT)", icon: Bot, milestone: 'MVP', tags: ['Ranking Engine'] },
+    { name: "Phantombuster", icon: Send, milestone: 'MVP', tags: ['Candidate Outreach', 'Automation'] },
     { name: "Candidate Profile System", icon: Users, milestone: 'V1', tags: ['User Data'] },
     { name: "Candidate Scoring AI (Talent Insights)", icon: BrainCircuit, milestone: 'V1', tags: ['Scoring AI'] },
     { name: "API Orchestration Layer", icon: GitMerge, milestone: 'V1', tags: ['Backend API'] },
@@ -37,12 +37,12 @@ const allIntegrations: Integration[] = [
 
 const milestones: Milestone[] = [
   {
-    title: 'MVP: JobGPT - Candidate Acquisition',
+    title: 'MVP: Candidate Sourcing & Outreach Engine',
     date: 'Target: July 22, 2025',
     successMetrics: [
-      'Aggregate jobs from multiple sources to create a comprehensive job feed.',
-      'Build the core AI matching engine (codename: JobGPT) to connect candidates with relevant job openings.',
-      'Drive initial candidate sign-ups to the platform.',
+      'Source candidate profiles from LinkedIn based on recruiter search criteria.',
+      'Use AI (JobGPT) to score and rank candidates against the ideal profile.',
+      'Automate initial outreach to top-ranked candidates using Phantombuster.',
     ],
   },
   {
