@@ -19,7 +19,7 @@ const Header = () => {
         </div>
         <div className="flex items-center gap-4">
           <Link to="/admin/project-plan">
-            <Button variant="outline">Admin Panel</Button>
+            <Button variant="outline">Project Plan</Button>
           </Link>
           <Button variant="ghost">Sign in</Button>
           <Button>Try for free</Button>
