@@ -18,7 +18,7 @@ interface Milestone {
 
 const allIntegrations: Integration[] = [
     { name: "LinkedIn Scraper (RapidAPI)", icon: Linkedin, milestone: 'MVP', tags: ['Candidate Sourcing'], cost: "$40.00/mo", requests: "15,000 Requests / Month" },
-    { name: "AI Candidate Ranking (JobGPT)", icon: Bot, milestone: 'MVP', tags: ['Ranking Engine'] },
+    { name: "AI Candidate Ranker", icon: Bot, milestone: 'MVP', tags: ['Ranking Engine'] },
     { name: "Phantombuster", icon: Send, milestone: 'MVP', tags: ['Candidate Outreach', 'Automation'] },
     { name: "Candidate Profile System", icon: Users, milestone: 'V1', tags: ['User Data'] },
     { name: "Candidate Scoring AI (Talent Insights)", icon: BrainCircuit, milestone: 'V1', tags: ['Scoring AI'] },
@@ -41,7 +41,7 @@ const milestones: Milestone[] = [
     date: 'Target: July 22, 2025',
     successMetrics: [
       'Source candidate profiles from LinkedIn based on recruiter search criteria.',
-      'Use AI (JobGPT) to score and rank candidates against the ideal profile.',
+      'Use a lightweight AI to rank candidates against the ideal profile.',
       'Automate initial outreach to top-ranked candidates using Phantombuster.',
     ],
   },
