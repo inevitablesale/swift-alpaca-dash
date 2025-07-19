@@ -1,5 +1,6 @@
 import IntegrationCard from "@/components/admin/IntegrationCard";
 import DataSchemaDialog from "@/components/admin/DataSchemaDialog";
+import PdlSchemaDialog from "@/components/admin/PdlSchemaDialog";
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import { LucideProps } from "lucide-react";
 
@@ -42,6 +43,24 @@ const ProjectPlanColumn = ({ title, integrations }: ProjectPlanColumnProps) => {
                     </div>
                   </DialogTrigger>
                   <DataSchemaDialog />
+                </Dialog>
+              );
+            }
+            if (integration.name === "People Data Labs (Companies & People)") {
+              return (
+                <Dialog key={`${integration.name}-${index}`}>
+                  <DialogTrigger asChild>
+                    <div className="cursor-pointer">
+                      <IntegrationCard
+                        name={integration.name}
+                        Icon={integration.icon}
+                        milestones={integration.milestones}
+                        cost={integration.cost}
+                        requests={integration.requests}
+                      />
+                    </div>
+                  </DialogTrigger>
+                  <PdlSchemaDialog />
                 </Dialog>
               );
             }
