@@ -1,4 +1,10 @@
 import {
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import {
   Card,
   CardContent,
   CardDescription,
@@ -17,18 +23,16 @@ import { Badge } from "@/components/ui/badge";
 import { CheckCircle2, XCircle } from "lucide-react";
 import { searchParams, enums, exampleResponse } from "../../data/apiSchema.ts";
 
-const DataSchema = () => {
+const DataSchemaDialog = () => {
   return (
-    <div className="flex h-full flex-col bg-white">
-      <header className="p-6 md:p-8 border-b">
-        <h1 className="text-3xl font-bold tracking-tight">
-          API Data Schema
-        </h1>
-        <p className="text-gray-600 mt-2">
-          Data model for the LinkedIn Scraper API (RapidAPI). This defines the search vectors and response structure for our jobs database.
-        </p>
-      </header>
-      <main className="flex-1 overflow-y-auto p-6 md:p-8 space-y-6">
+    <DialogContent className="max-w-4xl">
+      <DialogHeader>
+        <DialogTitle>API Data Schema: LinkedIn Scraper</DialogTitle>
+        <DialogDescription>
+          This defines the search vectors and response structure for our jobs database.
+        </DialogDescription>
+      </DialogHeader>
+      <div className="max-h-[75vh] overflow-y-auto p-1 pr-4 space-y-6">
         <Card>
           <CardHeader>
             <CardTitle>Search Jobs Endpoint</CardTitle>
@@ -87,16 +91,16 @@ const DataSchema = () => {
           <CardHeader>
             <CardTitle>Example Response Schema</CardTitle>
             <CardDescription>The structure of the data returned from a successful API call.</CardDescription>
-          </Header>
+          </CardHeader>
           <CardContent>
             <pre className="bg-gray-900 text-white p-4 rounded-lg text-sm overflow-x-auto">
               <code>{exampleResponse}</code>
             </pre>
           </CardContent>
         </Card>
-      </main>
-    </div>
+      </div>
+    </DialogContent>
   );
 };
 
-export default DataSchema;
+export default DataSchemaDialog;

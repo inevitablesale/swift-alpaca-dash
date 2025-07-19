@@ -1,4 +1,6 @@
 import IntegrationCard from "@/components/admin/IntegrationCard";
+import DataSchemaDialog from "@/components/admin/DataSchemaDialog";
+import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import { LucideProps } from "lucide-react";
 
 // Define the type for a single integration
@@ -24,16 +26,36 @@ const ProjectPlanColumn = ({ title, integrations }: ProjectPlanColumnProps) => {
       </div>
       <div className="flex-1 space-y-4 overflow-y-auto p-4">
         {integrations.length > 0 ? (
-          integrations.map((integration, index) => (
-            <IntegrationCard
-              key={`${integration.name}-${index}`}
-              name={integration.name}
-              Icon={integration.icon}
-              milestones={integration.milestones}
-              cost={integration.cost}
-              requests={integration.requests}
-            />
-          ))
+          integrations.map((integration, index) => {
+            if (integration.name === "LinkedIn Scraper (RapidAPI)") {
+              return (
+                <Dialog key={`${integration.name}-${index}`}>
+                  <DialogTrigger asChild>
+                    <div className="cursor-pointer">
+                      <IntegrationCard
+                        name={integration.name}
+                        Icon={integration.icon}
+                        milestones={integration.milestones}
+                        cost={integration.cost}
+                        requests={integration.requests}
+                      />
+                    </div>
+                  </DialogTrigger>
+                  <DataSchemaDialog />
+                </Dialog>
+              );
+            }
+            return (
+              <IntegrationCard
+                key={`${integration.name}-${index}`}
+                name={integration.name}
+                Icon={integration.icon}
+                milestones={integration.milestones}
+                cost={integration.cost}
+                requests={integration.requests}
+              />
+            );
+          })
         ) : (
           <div className="flex items-center justify-center h-full text-sm text-gray-500">
             No items for this milestone.
