@@ -21,8 +21,8 @@ const coreArchitecture: Integration[] = [
 ];
 
 const dataIntegrations: Integration[] = [
-  { name: "People Data Labs (Companies & People)", icon: Database, milestones: ['V1'] },
-  { name: "LinkedIn Scraper (RapidAPI)", icon: Linkedin, milestones: ['V1'], cost: "$40.00/mo", requests: "15,000 Requests / Month" },
+  { name: "People Data Labs (Companies & People)", icon: Database, milestones: ['MVP'] },
+  { name: "LinkedIn Scraper (RapidAPI)", icon: Linkedin, milestones: ['MVP'], cost: "$40.00/mo", requests: "15,000 Requests / Month" },
   { name: "GitHub", icon: Github, milestones: ['V1.2'] },
   { name: "Twitter / X", icon: Twitter, milestones: ['V1.3'] },
 ];
@@ -33,7 +33,7 @@ const aiIntegrations: Integration[] = [
 ];
 
 const automationIntegrations: Integration[] = [
-  { name: "Phantombuster", icon: Bot, milestones: ['V1.2'] },
+  { name: "Phantombuster", icon: Bot, milestones: ['MVP'] },
 ];
 
 const atsIntegrations: Integration[] = [
