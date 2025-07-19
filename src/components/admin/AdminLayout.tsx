@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import { Home, Settings, Users } from "lucide-react";
+import { Settings } from "lucide-react";
 
 const AdminLayout = () => {
   return (
@@ -13,17 +13,9 @@ const AdminLayout = () => {
           </span>
         </div>
         <nav className="flex flex-col gap-1">
-          <AdminNavLink to="/admin/dashboard">
-            <Home className="h-4 w-4" />
-            Dashboard
-          </AdminNavLink>
           <AdminNavLink to="/admin/integrations">
             <Settings className="h-4 w-4" />
             Integrations
-          </AdminNavLink>
-          <AdminNavLink to="/admin/users">
-            <Users className="h-4 w-4" />
-            User Management
           </AdminNavLink>
         </nav>
       </aside>
