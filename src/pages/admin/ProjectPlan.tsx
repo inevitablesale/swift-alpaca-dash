@@ -16,10 +16,6 @@ interface Milestone {
 }
 
 const allIntegrations: Integration[] = [
-    { name: "User Registration & Social Auth", icon: Users, milestones: ['MVP'] },
-    { name: "Basic Job Application Tracking", icon: CheckSquare, milestones: ['MVP'] },
-    { name: "Advanced Job Filtering", icon: Filter, milestones: ['MVP'] },
-    { name: "AI Cover Letter Generation", icon: FileText, milestones: ['MVP'] },
     { name: "LinkedIn Scraper (RapidAPI)", icon: Linkedin, milestones: ['MVP'], cost: "$40.00/mo", requests: "15,000 Requests / Month" },
     { name: "AI Job Matching (OpenAI)", icon: Bot, milestones: ['MVP'] },
     { name: "Basic Job Posting", icon: FileText, milestones: ['V1'] },
@@ -48,10 +44,9 @@ const milestones: Milestone[] = [
     title: 'MVP: Job Aggregator Platform',
     date: 'Target: July 22, 2025',
     successMetrics: [
-      'Unified search across multiple job platforms.',
-      'Users can track application status (Applied, Saved).',
-      'AI-powered cover letter generation is functional.',
-      'User registration with social auth is live.',
+      'Aggregate jobs from multiple sources into a single feed.',
+      'AI matching delivers highly relevant job recommendations.',
+      'Core platform is free for all job seekers.',
     ],
   },
   {
