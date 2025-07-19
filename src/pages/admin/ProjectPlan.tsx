@@ -1,5 +1,5 @@
 import MilestoneSection from "@/components/admin/MilestoneSection";
-import { Briefcase, Linkedin, Github, Bot, Mail, BrainCircuit, Twitter, Users, GitMerge, CreditCard, LucideProps, Database, FileText, CheckSquare } from "lucide-react";
+import { Briefcase, Linkedin, Github, Bot, Mail, BrainCircuit, Twitter, Users, GitMerge, CreditCard, LucideProps, Database, FileText, CheckSquare, Filter } from "lucide-react";
 
 interface Integration {
   name: string;
@@ -16,8 +16,10 @@ interface Milestone {
 }
 
 const allIntegrations: Integration[] = [
-    { name: "User Registration & Profiles", icon: Users, milestones: ['MVP'] },
+    { name: "User Registration & Social Auth", icon: Users, milestones: ['MVP'] },
     { name: "Basic Job Application Tracking", icon: CheckSquare, milestones: ['MVP'] },
+    { name: "Advanced Job Filtering", icon: Filter, milestones: ['MVP'] },
+    { name: "AI Cover Letter Generation", icon: FileText, milestones: ['MVP'] },
     { name: "LinkedIn Scraper (RapidAPI)", icon: Linkedin, milestones: ['MVP'], cost: "$40.00/mo", requests: "15,000 Requests / Month" },
     { name: "AI Job Matching (OpenAI)", icon: Bot, milestones: ['MVP'] },
     { name: "Basic Job Posting", icon: FileText, milestones: ['V1'] },
@@ -26,6 +28,7 @@ const allIntegrations: Integration[] = [
     { name: "Phantombuster", icon: Bot, milestones: ['V1'], cost: "$56/mo", requests: "20h/month execution time" },
     { name: "Company Profile System", icon: Briefcase, milestones: ['V1.1'] },
     { name: "Usage Tracking & Credit System", icon: CreditCard, milestones: ['V1.1'] },
+    { name: "Email Notification System", icon: Mail, milestones: ['V1.1'] },
     { name: "Mistral", icon: BrainCircuit, milestones: ['V1.1'] },
     { name: "Greenhouse", icon: Briefcase, milestones: ['V1.1'] },
     { name: "Lever", icon: Briefcase, milestones: ['V1.1'] },
