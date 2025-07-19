@@ -33,7 +33,7 @@ const aiIntegrations: Integration[] = [
 ];
 
 const automationIntegrations: Integration[] = [
-  { name: "Phantombuster", icon: Bot, milestones: ['MVP'] },
+  { name: "Phantombuster", icon: Bot, milestones: ['MVP'], cost: "$56/mo", requests: "20h/month execution time" },
 ];
 
 const atsIntegrations: Integration[] = [
