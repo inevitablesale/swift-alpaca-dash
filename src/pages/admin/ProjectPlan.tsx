@@ -1,10 +1,11 @@
 import MilestoneSection from "@/components/admin/MilestoneSection";
-import { Briefcase, Linkedin, Github, Bot, Mail, BrainCircuit, Twitter, Users, GitMerge, CreditCard, LucideProps, Database, FileText, CheckSquare, Filter } from "lucide-react";
+import { Briefcase, Linkedin, Github, Bot, Mail, BrainCircuit, Twitter, Users, GitMerge, CreditCard, LucideProps, Database, Filter } from "lucide-react";
 
 interface Integration {
   name: string;
   icon: React.ComponentType<LucideProps>;
-  milestones: string[];
+  milestone: 'MVP' | 'V1' | 'V1.1' | 'V1.2' | 'V1.3';
+  tags: string[];
   cost?: string;
   requests?: string;
 }
@@ -16,22 +17,22 @@ interface Milestone {
 }
 
 const allIntegrations: Integration[] = [
-    { name: "LinkedIn Scraper (RapidAPI)", icon: Linkedin, milestones: ['MVP'], cost: "$40.00/mo", requests: "15,000 Requests / Month" },
-    { name: "Job Aggregation Engine", icon: GitMerge, milestones: ['MVP'] },
-    { name: "AI Job Matching (JobGPT)", icon: Bot, milestones: ['MVP'] },
-    { name: "Candidate Profile System", icon: Users, milestones: ['V1'] },
-    { name: "Candidate Scoring AI (Talent Insights)", icon: BrainCircuit, milestones: ['V1'] },
-    { name: "API Orchestration Layer", icon: GitMerge, milestones: ['V1'] },
-    { name: "People Data Labs (Enrichment)", icon: Database, milestones: ['V1.1'], cost: "$1,325.00/mo", requests: "5,000 Credits / month" },
-    { name: "Recruiter Search (PeopleGPT)", icon: Filter, milestones: ['V1.1'] },
-    { name: "Usage Tracking & Credit System", icon: CreditCard, milestones: ['V1.1'] },
-    { name: "Email Notification System", icon: Mail, milestones: ['V1.1'] },
-    { name: "Greenhouse", icon: Briefcase, milestones: ['V1.1'] },
-    { name: "Lever", icon: Briefcase, milestones: ['V1.1'] },
-    { name: "GitHub", icon: Github, milestones: ['V1.2'] },
-    { name: "Ashby", icon: Briefcase, milestones: ['V1.2'] },
-    { name: "Workable", icon: Briefcase, milestones: ['V1.2'] },
-    { name: "Twitter / X", icon: Twitter, milestones: ['V1.3'] },
+    { name: "LinkedIn Scraper (RapidAPI)", icon: Linkedin, milestone: 'MVP', tags: ['Job Sourcing'], cost: "$40.00/mo", requests: "15,000 Requests / Month" },
+    { name: "Job Aggregation Engine", icon: GitMerge, milestone: 'MVP', tags: ['Data Pipeline'] },
+    { name: "AI Job Matching (JobGPT)", icon: Bot, milestone: 'MVP', tags: ['Matching Engine'] },
+    { name: "Candidate Profile System", icon: Users, milestone: 'V1', tags: ['User Data'] },
+    { name: "Candidate Scoring AI (Talent Insights)", icon: BrainCircuit, milestone: 'V1', tags: ['Scoring AI'] },
+    { name: "API Orchestration Layer", icon: GitMerge, milestone: 'V1', tags: ['Backend API'] },
+    { name: "People Data Labs (Enrichment)", icon: Database, milestone: 'V1.1', tags: ['Data Enrichment'], cost: "$1,325.00/mo", requests: "5,000 Credits / month" },
+    { name: "Recruiter Search (PeopleGPT)", icon: Filter, milestone: 'V1.1', tags: ['Recruiter Tool'] },
+    { name: "Usage Tracking & Credit System", icon: CreditCard, milestone: 'V1.1', tags: ['Monetization'] },
+    { name: "Email Notification System", icon: Mail, milestone: 'V1.1', tags: ['Notifications'] },
+    { name: "Greenhouse", icon: Briefcase, milestone: 'V1.1', tags: ['ATS Integration'] },
+    { name: "Lever", icon: Briefcase, milestone: 'V1.1', tags: ['ATS Integration'] },
+    { name: "GitHub", icon: Github, milestone: 'V1.2', tags: ['Developer Sourcing'] },
+    { name: "Ashby", icon: Briefcase, milestone: 'V1.2', tags: ['ATS Integration'] },
+    { name: "Workable", icon: Briefcase, milestone: 'V1.2', tags: ['ATS Integration'] },
+    { name: "Twitter / X", icon: Twitter, milestone: 'V1.3', tags: ['Social Sourcing'] },
 ];
 
 const milestones: Milestone[] = [
@@ -87,7 +88,7 @@ const milestoneColors: ("purple" | "sky" | "emerald" | "amber" | "rose")[] = ["p
 
 const getIntegrationsForMilestone = (milestoneTitle: string) => {
   const key = milestoneTitle.split(':')[0];
-  return allIntegrations.filter(integration => integration.milestones.includes(key));
+  return allIntegrations.filter(integration => integration.milestone === key);
 };
 
 const ProjectPlan = () => {

@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 interface Integration {
   name: string;
   icon: React.ComponentType<LucideProps>;
-  milestones: string[];
+  tags: string[];
   cost?: string;
   requests?: string;
 }
@@ -90,7 +90,7 @@ const MilestoneSection = ({ title, date, successMetrics, integrations, color = '
                   key={`${integration.name}-${index}`}
                   name={integration.name}
                   Icon={integration.icon}
-                  milestones={integration.milestones}
+                  tags={integration.tags}
                   cost={integration.cost}
                   requests={integration.requests}
                 />

@@ -12,28 +12,12 @@ import { cn } from "@/lib/utils";
 interface IntegrationCardProps {
   name: string;
   Icon: React.ComponentType<LucideProps>;
-  milestones?: string[];
+  tags?: string[];
   cost?: string;
   requests?: string;
 }
 
-const getMilestoneVariant = (milestone: string): "default" | "secondary" | "outline" | "destructive" => {
-  const lowerMilestone = milestone.toLowerCase();
-  if (lowerMilestone === 'mvp') {
-    return 'default';
-  }
-  if (lowerMilestone === 'v1') {
-    return 'secondary';
-  }
-  // For point releases like V1.1, V1.2
-  if (lowerMilestone.startsWith('v1.')) {
-    return 'outline';
-  }
-  // Fallback for anything else
-  return 'outline';
-};
-
-const IntegrationCard = ({ name, Icon, milestones = [], cost, requests }: IntegrationCardProps) => {
+const IntegrationCard = ({ name, Icon, tags = [], cost, requests }: IntegrationCardProps) => {
   const [costValue, costPeriod] = cost?.split('/') || [];
 
   return (
@@ -54,10 +38,10 @@ const IntegrationCard = ({ name, Icon, milestones = [], cost, requests }: Integr
             <p className="text-xs text-gray-500">{requests}</p>
           )}
         </div>
-        <div className={cn("flex gap-2", (cost || requests) && "mt-4")}>
-          {milestones.map((milestone) => (
-            <Badge key={milestone} variant={getMilestoneVariant(milestone)}>
-              {milestone}
+        <div className={cn("flex gap-2 flex-wrap", (cost || requests) && "mt-4")}>
+          {tags.map((tag) => (
+            <Badge key={tag} variant="secondary">
+              {tag}
             </Badge>
           ))}
         </div>
