@@ -17,6 +17,7 @@ interface Milestone {
 
 const allIntegrations: Integration[] = [
     { name: "LinkedIn Scraper (RapidAPI)", icon: Linkedin, milestones: ['MVP'], cost: "$40.00/mo", requests: "15,000 Requests / Month" },
+    { name: "Job Aggregation Engine", icon: GitMerge, milestones: ['MVP'] },
     { name: "AI Job Matching (OpenAI)", icon: Bot, milestones: ['MVP'] },
     { name: "Basic Job Posting", icon: FileText, milestones: ['V1'] },
     { name: "API Orchestration Layer", icon: GitMerge, milestones: ['V1'] },
