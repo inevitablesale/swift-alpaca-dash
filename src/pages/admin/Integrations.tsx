@@ -1,4 +1,10 @@
 import IntegrationCard from "@/components/admin/IntegrationCard";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { Briefcase, Linkedin, Github, Bot, Mail, BrainCircuit, Twitter } from "lucide-react";
 
 const atsIntegrations = [
@@ -42,71 +48,97 @@ const Integrations = () => {
           Manage system-wide API keys and service connections.
         </p>
       </header>
-      <main className="space-y-12">
-        <section>
-          <h2 className="text-2xl font-semibold mb-4">Applicant Tracking Systems (ATS)</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {atsIntegrations.map((integration) => (
-              <IntegrationCard
-                key={integration.name}
-                name={integration.name}
-                Icon={integration.icon}
-              />
-            ))}
-          </div>
-        </section>
+      <main>
+        <Accordion
+          type="multiple"
+          defaultValue={["ats", "data", "automation", "ai", "productivity"]}
+          className="w-full space-y-4"
+        >
+          <AccordionItem value="ats">
+            <AccordionTrigger className="text-2xl font-semibold hover:no-underline">
+              Applicant Tracking Systems (ATS)
+            </AccordionTrigger>
+            <AccordionContent>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-4">
+                {atsIntegrations.map((integration) => (
+                  <IntegrationCard
+                    key={integration.name}
+                    name={integration.name}
+                    Icon={integration.icon}
+                  />
+                ))}
+              </div>
+            </AccordionContent>
+          </AccordionItem>
 
-        <section>
-          <h2 className="text-2xl font-semibold mb-4">Data & Social</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {dataIntegrations.map((integration) => (
-              <IntegrationCard
-                key={integration.name}
-                name={integration.name}
-                Icon={integration.icon}
-              />
-            ))}
-          </div>
-        </section>
+          <AccordionItem value="data">
+            <AccordionTrigger className="text-2xl font-semibold hover:no-underline">
+              Data & Social
+            </AccordionTrigger>
+            <AccordionContent>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-4">
+                {dataIntegrations.map((integration) => (
+                  <IntegrationCard
+                    key={integration.name}
+                    name={integration.name}
+                    Icon={integration.icon}
+                  />
+                ))}
+              </div>
+            </AccordionContent>
+          </AccordionItem>
 
-        <section>
-          <h2 className="text-2xl font-semibold mb-4">Automation & Outreach</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {automationIntegrations.map((integration) => (
-              <IntegrationCard
-                key={integration.name}
-                name={integration.name}
-                Icon={integration.icon}
-              />
-            ))}
-          </div>
-        </section>
+          <AccordionItem value="automation">
+            <AccordionTrigger className="text-2xl font-semibold hover:no-underline">
+              Automation & Outreach
+            </AccordionTrigger>
+            <AccordionContent>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-4">
+                {automationIntegrations.map((integration) => (
+                  <IntegrationCard
+                    key={integration.name}
+                    name={integration.name}
+                    Icon={integration.icon}
+                  />
+                ))}
+              </div>
+            </AccordionContent>
+          </AccordionItem>
 
-        <section>
-          <h2 className="text-2xl font-semibold mb-4">AI Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {aiIntegrations.map((integration) => (
-              <IntegrationCard
-                key={integration.name}
-                name={integration.name}
-                Icon={integration.icon}
-              />
-            ))}
-          </div>
-        </section>
+          <AccordionItem value="ai">
+            <AccordionTrigger className="text-2xl font-semibold hover:no-underline">
+              AI Services
+            </AccordionTrigger>
+            <AccordionContent>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-4">
+                {aiIntegrations.map((integration) => (
+                  <IntegrationCard
+                    key={integration.name}
+                    name={integration.name}
+                    Icon={integration.icon}
+                  />
+                ))}
+              </div>
+            </AccordionContent>
+          </AccordionItem>
 
-        <section>
-          <h2 className="text-2xl font-semibold mb-4">Productivity</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {productivityIntegrations.map((integration) => (
-              <IntegrationCard
-                key={integration.name}
-                name={integration.name}
-                Icon={integration.icon}
-              />
-            ))}
-          </div>
-        </section>
+          <AccordionItem value="productivity">
+            <AccordionTrigger className="text-2xl font-semibold hover:no-underline">
+              Productivity
+            </AccordionTrigger>
+            <AccordionContent>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-4">
+                {productivityIntegrations.map((integration) => (
+                  <IntegrationCard
+                    key={integration.name}
+                    name={integration.name}
+                    Icon={integration.icon}
+                  />
+                ))}
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
       </main>
     </div>
   );
