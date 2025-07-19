@@ -43,7 +43,7 @@ const allIntegrations: Integration[] = [
 const milestones: Milestone[] = [
   {
     title: 'MVP',
-    date: 'Target: End of Q3 2024',
+    date: 'Target: July 22, 2025',
     successMetrics: [
       'Launch a functional job matching platform for candidates.',
       'Achieve 1,000+ active weekly users.',
@@ -52,7 +52,7 @@ const milestones: Milestone[] = [
   },
   {
     title: 'V1',
-    date: 'Target: Q4 2024',
+    date: 'Target: July 29, 2025',
     successMetrics: [
       'Onboard first 100 recruiters.',
       'Develop basic recruiter-facing features.',
@@ -61,7 +61,7 @@ const milestones: Milestone[] = [
   },
   {
     title: 'V1.1',
-    date: 'Target: Q1 2025',
+    date: 'Target: August 5, 2025',
     successMetrics: [
       'Achieve $10k MRR.',
       'Integrate with major ATS & productivity suites.',
@@ -70,7 +70,7 @@ const milestones: Milestone[] = [
   },
   {
     title: 'V1.2',
-    date: 'Target: Q2 2025',
+    date: 'Target: August 12, 2025',
     successMetrics: [
       'Double active recruiter base to 200+.',
       'Incorporate developer-specific data sources (GitHub).',
@@ -79,7 +79,7 @@ const milestones: Milestone[] = [
   },
   {
     title: 'V1.3',
-    date: 'Target: Q3 2025',
+    date: 'Target: August 19, 2025',
     successMetrics: [
       'Reach 10,000+ active weekly candidates.',
       'Integrate social data sources (Twitter/X).',
