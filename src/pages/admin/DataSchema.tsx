@@ -87,7 +87,7 @@ const DataSchema = () => {
           <CardHeader>
             <CardTitle>Example Response Schema</CardTitle>
             <CardDescription>The structure of the data returned from a successful API call.</CardDescription>
-          </Header>
+          </CardHeader>
           <CardContent>
             <pre className="bg-gray-900 text-white p-4 rounded-lg text-sm overflow-x-auto">
               <code>{exampleResponse}</code>
