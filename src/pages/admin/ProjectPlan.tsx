@@ -1,5 +1,5 @@
 import MilestoneSection from "@/components/admin/MilestoneSection";
-import { Briefcase, Linkedin, Github, Bot, Mail, BrainCircuit, Twitter, Users, GitMerge, CreditCard, LucideProps, Database, FileText, UserPlus } from "lucide-react";
+import { Briefcase, Linkedin, Github, Bot, Mail, BrainCircuit, Twitter, Users, GitMerge, CreditCard, LucideProps, Database, FileText, CheckSquare, Filter } from "lucide-react";
 
 interface Integration {
   name: string;
@@ -16,10 +16,8 @@ interface Milestone {
 }
 
 const allIntegrations: Integration[] = [
-    { name: "LinkedIn Job Scraper", icon: Linkedin, milestones: ['MVP'], cost: "$40.00/mo", requests: "15,000 Requests / Month" },
-    { name: "AI Matching Engine (OpenAI)", icon: Bot, milestones: ['MVP'] },
-    { name: "User Sign-up & Profile Submission", icon: UserPlus, milestones: ['MVP'] },
-    { name: "LinkedIn Profile Scraper", icon: Linkedin, milestones: ['MVP'] },
+    { name: "LinkedIn Scraper (RapidAPI)", icon: Linkedin, milestones: ['MVP'], cost: "$40.00/mo", requests: "15,000 Requests / Month" },
+    { name: "AI Job Matching (OpenAI)", icon: Bot, milestones: ['MVP'] },
     { name: "Basic Job Posting", icon: FileText, milestones: ['V1'] },
     { name: "API Orchestration Layer", icon: GitMerge, milestones: ['V1'] },
     { name: "People Data Labs (Companies & People)", icon: Database, milestones: ['V1'], cost: "$1,325.00/mo", requests: "5,000 Credits / month" },
@@ -43,21 +41,21 @@ const allIntegrations: Integration[] = [
 
 const milestones: Milestone[] = [
   {
-    title: 'MVP: Candidate Matching Engine',
+    title: 'MVP: Job Aggregator Platform',
     date: 'Target: July 22, 2025',
     successMetrics: [
-      "Build a 'magnet' where candidates give their information away for free.",
-      "Scrape a user's LinkedIn profile and match them with jobs they may not have found.",
-      "Get 100 people to sign up.",
+      'Aggregate jobs from multiple sources into a single feed.',
+      'AI matching delivers highly relevant job recommendations.',
+      'Core platform is free for all job seekers.',
     ],
   },
   {
-    title: 'V1: Initial Growth & Recruiter Tools',
+    title: 'V1',
     date: 'Target: July 29, 2025',
     successMetrics: [
-      'Onboard first 10 paying recruiters.',
-      'Introduce premium candidate features (e.g., application tracking).',
-      'Refine matching algorithm based on initial user data.',
+      'Onboard first 100 recruiters.',
+      'Develop basic recruiter-facing features.',
+      'Establish initial revenue stream.',
     ],
   },
   {
