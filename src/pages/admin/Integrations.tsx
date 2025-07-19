@@ -9,7 +9,7 @@ import { Briefcase, Linkedin, Github, Bot, Mail, BrainCircuit, Twitter, Users, G
 
 const coreArchitecture = [
     { name: "Multi-Tenant Structure", icon: Users, milestones: ['MVP'] },
-    { name: "Security & Scalability Foundations", icon: Shield, milestones: ['MVP', 'V1', 'Future'] },
+    { name: "Security & Scalability Foundations", icon: Shield, milestones: ['MVP', 'V1', 'V1.1'] },
     { name: "API Orchestration Layer", icon: GitMerge, milestones: ['V1'] },
     { name: "Usage Tracking & Credit System", icon: CreditCard, milestones: ['V1'] },
 ];
@@ -17,17 +17,17 @@ const coreArchitecture = [
 const atsIntegrations = [
   { name: "Greenhouse", icon: Briefcase, milestones: ['V1'] },
   { name: "Lever", icon: Briefcase, milestones: ['V1'] },
-  { name: "Ashby", icon: Briefcase, milestones: ['Future'] },
-  { name: "Workable", icon: Briefcase, milestones: ['Future'] },
-  { name: "SmartRecruiters", icon: Briefcase, milestones: ['Future'] },
-  { name: "Recruitee", icon: Briefcase, milestones: ['Future'] },
-  { name: "BreezyHR", icon: Briefcase, milestones: ['Future'] },
+  { name: "Ashby", icon: Briefcase, milestones: ['V1.1'] },
+  { name: "Workable", icon: Briefcase, milestones: ['V1.1'] },
+  { name: "SmartRecruiters", icon: Briefcase, milestones: ['V1.1'] },
+  { name: "Recruitee", icon: Briefcase, milestones: ['V1.1'] },
+  { name: "BreezyHR", icon: Briefcase, milestones: ['V1.1'] },
 ];
 
 const dataIntegrations = [
   { name: "LinkedIn Scraper (RapidAPI)", icon: Linkedin, milestones: ['V1'] },
-  { name: "GitHub", icon: Github, milestones: ['Future'] },
-  { name: "Twitter / X", icon: Twitter, milestones: ['Future'] },
+  { name: "GitHub", icon: Github, milestones: ['V1.1'] },
+  { name: "Twitter / X", icon: Twitter, milestones: ['V1.1'] },
 ];
 
 const automationIntegrations = [
@@ -41,7 +41,7 @@ const aiIntegrations = [
 
 const productivityIntegrations = [
   { name: "Google Workspace", icon: Mail, milestones: ['V1'] },
-  { name: "Microsoft 365", icon: Mail, milestones: ['Future'] },
+  { name: "Microsoft 365", icon: Mail, milestones: ['V1.1'] },
 ];
 
 const Integrations = () => {

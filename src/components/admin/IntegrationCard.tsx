@@ -16,16 +16,19 @@ interface IntegrationCardProps {
 }
 
 const getMilestoneVariant = (milestone: string): "default" | "secondary" | "outline" | "destructive" => {
-  switch (milestone.toLowerCase()) {
-    case 'mvp':
-      return 'default';
-    case 'v1':
-      return 'secondary';
-    case 'future':
-      return 'outline';
-    default:
-      return 'outline';
+  const lowerMilestone = milestone.toLowerCase();
+  if (lowerMilestone === 'mvp') {
+    return 'default';
   }
+  if (lowerMilestone === 'v1') {
+    return 'secondary';
+  }
+  // For point releases like V1.1, V1.2
+  if (lowerMilestone.startsWith('v1.')) {
+    return 'outline';
+  }
+  // Fallback for anything else
+  return 'outline';
 };
 
 const IntegrationCard = ({ name, Icon, milestones = [] }: IntegrationCardProps) => {
@@ -37,15 +40,11 @@ const IntegrationCard = ({ name, Icon, milestones = [] }: IntegrationCardProps) 
       </CardHeader>
       <CardContent className="flex-grow flex items-end">
         <div className="flex gap-2">
-          {milestones.length > 0 ? (
-            milestones.map((milestone) => (
-              <Badge key={milestone} variant={getMilestoneVariant(milestone)}>
-                {milestone}
-              </Badge>
-            ))
-          ) : (
-            <Badge variant="outline">Future</Badge>
-          )}
+          {milestones.map((milestone) => (
+            <Badge key={milestone} variant={getMilestoneVariant(milestone)}>
+              {milestone}
+            </Badge>
+          ))}
         </div>
       </CardContent>
     </Card>
