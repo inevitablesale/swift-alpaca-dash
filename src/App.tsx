@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import AdminLayout from "./components/admin/AdminLayout";
 import AdminProjectPlan from "./pages/admin/ProjectPlan";
-import AdminDataSchema from "./pages/admin/DataSchema";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,7 +22,6 @@ const App = () => (
           <Route path="/admin" element={<AdminLayout />}>
             <Route index element={<Navigate to="/admin/project-plan" replace />} />
             <Route path="project-plan" element={<AdminProjectPlan />} />
-            <Route path="data-schema" element={<AdminDataSchema />} />
           </Route>
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

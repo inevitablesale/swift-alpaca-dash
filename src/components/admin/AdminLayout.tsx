@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import { Kanban, Database } from "lucide-react";
+import { Kanban } from "lucide-react";
 
 const AdminLayout = () => {
   return (
@@ -16,10 +16,6 @@ const AdminLayout = () => {
           <AdminNavLink to="/admin/project-plan">
             <Kanban className="h-4 w-4" />
             Project Plan
-          </AdminNavLink>
-          <AdminNavLink to="/admin/data-schema">
-            <Database className="h-4 w-4" />
-            Data Schema
           </AdminNavLink>
         </nav>
       </aside>
