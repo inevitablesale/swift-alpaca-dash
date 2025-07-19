@@ -18,7 +18,7 @@ const Header = () => {
           </nav>
         </div>
         <div className="flex items-center gap-4">
-          <Link to="/admin">
+          <Link to="/admin/dashboard">
             <Button variant="outline">Admin Panel</Button>
           </Link>
           <Button variant="ghost">Sign in</Button>

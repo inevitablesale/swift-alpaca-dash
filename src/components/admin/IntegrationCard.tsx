@@ -29,17 +29,15 @@ interface IntegrationCardProps {
 }
 
 const IntegrationCard = ({ name, Icon }: IntegrationCardProps) => {
-  const [isConnected, setIsConnected] = React.useState(false);
+  const [isActive, setIsActive] = React.useState(Math.random() > 0.3); // Simulate active status
   const [apiKey, setApiKey] = React.useState("");
   const [isDialogOpen, setIsDialogOpen] = React.useState(false);
 
   const handleSave = () => {
-    // In a real app, you'd send this to a secure backend.
-    // For now, we'll simulate a successful connection.
-    console.log(`Saving API Key for ${name}: ${apiKey}`);
+    console.log(`Updating system-wide API Key for ${name}: ${apiKey}`);
     if (apiKey) {
-      setIsConnected(true);
-      showSuccess(`${name} connected successfully!`);
+      setIsActive(true);
+      showSuccess(`${name} API key updated successfully!`);
     }
     setIsDialogOpen(false);
     setApiKey("");
@@ -53,23 +51,23 @@ const IntegrationCard = ({ name, Icon }: IntegrationCardProps) => {
       </CardHeader>
       <CardContent>
         <CardDescription className="mb-4">
-          Connect your {name} account to sync job postings.
+          Manage the system-wide {name} integration.
         </CardDescription>
         <div className="flex items-center justify-between">
-          <Badge variant={isConnected ? "default" : "secondary"}>
-            {isConnected ? "Connected" : "Not Connected"}
+          <Badge variant={isActive ? "default" : "destructive"}>
+            {isActive ? "Active" : "Inactive"}
           </Badge>
           <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
             <DialogTrigger asChild>
               <Button variant="outline" size="sm">
-                {isConnected ? "Configure" : "Connect"}
+                Manage
               </Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-[425px]">
               <DialogHeader>
-                <DialogTitle>Configure {name} Integration</DialogTitle>
+                <DialogTitle>Manage {name} API Key</DialogTitle>
                 <DialogDescription>
-                  Enter your API key to connect your {name} account.
+                  Update the system-wide API key for {name}. This will affect all users.
                 </DialogDescription>
               </DialogHeader>
               <div className="grid gap-4 py-4">
@@ -82,7 +80,7 @@ const IntegrationCard = ({ name, Icon }: IntegrationCardProps) => {
                     value={apiKey}
                     onChange={(e) => setApiKey(e.target.value)}
                     className="col-span-3"
-                    placeholder="Paste your API key here"
+                    placeholder="Enter new system-wide API key"
                   />
                 </div>
               </div>
@@ -93,7 +91,7 @@ const IntegrationCard = ({ name, Icon }: IntegrationCardProps) => {
                   </Button>
                 </DialogClose>
                 <Button type="button" onClick={handleSave}>
-                  Save
+                  Save Changes
                 </Button>
               </DialogFooter>
             </DialogContent>
