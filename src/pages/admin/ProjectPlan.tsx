@@ -17,12 +17,11 @@ interface Milestone {
 }
 
 const allIntegrations: Integration[] = [
-    { name: "Job Aggregator Engine", icon: Search, milestone: 'MVP', tags: ['Job Sourcing'] },
+    { name: "Job Aggregator Engine", icon: Search, milestone: 'MVP', tags: ['Job Sourcing', 'Multi-Platform'] },
     { name: "LinkedIn Scraper (RapidAPI)", icon: Linkedin, milestone: 'MVP', tags: ['Candidate Sourcing'], cost: "$40.00/mo", requests: "15,000 Requests / Month" },
-    { name: "AI Candidate Ranker", icon: Bot, milestone: 'MVP', tags: ['Ranking Engine'] },
     { name: "Phantombuster", icon: Send, milestone: 'MVP', tags: ['Candidate Outreach', 'Automation'] },
     { name: "Candidate Profile System", icon: Users, milestone: 'V1', tags: ['User Data'] },
-    { name: "Candidate Scoring AI (Talent Insights)", icon: BrainCircuit, milestone: 'V1', tags: ['Scoring AI'] },
+    { name: "Candidate Scoring AI (Talent Insights)", icon: BrainCircuit, milestone: 'V1', tags: ['Scoring AI', 'Ranking Engine'] },
     { name: "API Orchestration Layer", icon: GitMerge, milestone: 'V1', tags: ['Backend API'] },
     { name: "People Data Labs", icon: Database, milestone: 'V1.1', tags: ['Data Enrichment'], cost: "$1,325.00/mo", requests: "5,000 Credits / month" },
     { name: "Recruiter Search (PeopleGPT)", icon: Filter, milestone: 'V1.1', tags: ['Recruiter Tool'] },
@@ -41,10 +40,9 @@ const milestones: Milestone[] = [
     title: 'MVP: Core Job Board & Candidate Outreach Pipeline',
     date: 'Target: July 22, 2025',
     successMetrics: [
-      'Aggregate job listings using our Job Aggregator Engine.',
-      'For each job, source potential candidates from LinkedIn via the scraper.',
-      'Use a lightweight AI to rank the best candidates for each role.',
-      'Initiate automated outreach to top candidates with Phantombuster.',
+      'Aggregate job listings from LinkedIn, Upwork, Indeed, and ZipRecruiter.',
+      'Source potential candidates for aggregated jobs using the LinkedIn scraper.',
+      'Initiate automated outreach to sourced candidates via Phantombuster.',
     ],
   },
   {
@@ -52,7 +50,7 @@ const milestones: Milestone[] = [
     date: 'Target: July 29, 2025',
     successMetrics: [
       'Build a robust candidate profile system for collecting user data.',
-      'Develop the core AI to score and analyze candidate profiles, providing value back to the user.',
+      'Develop the core AI to rank and score candidate profiles, providing value back to the user.',
       'Establish the foundation of our proprietary candidate dataset.',
     ],
   },
