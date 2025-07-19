@@ -13,6 +13,8 @@ interface IntegrationCardProps {
   name: string;
   Icon: React.ComponentType<LucideProps>;
   milestones?: string[];
+  cost?: string;
+  requests?: string;
 }
 
 const getMilestoneVariant = (milestone: string): "default" | "secondary" | "outline" | "destructive" => {
@@ -31,15 +33,28 @@ const getMilestoneVariant = (milestone: string): "default" | "secondary" | "outl
   return 'outline';
 };
 
-const IntegrationCard = ({ name, Icon, milestones = [] }: IntegrationCardProps) => {
+const IntegrationCard = ({ name, Icon, milestones = [], cost, requests }: IntegrationCardProps) => {
+  const [costValue, costPeriod] = cost?.split('/') || [];
+
   return (
     <Card className="flex flex-col">
       <CardHeader className="flex flex-row items-center justify-between pb-2">
         <CardTitle className="text-lg font-medium">{name}</CardTitle>
         <Icon className="h-6 w-6 text-gray-400" />
       </CardHeader>
-      <CardContent className="flex-grow flex items-end">
-        <div className="flex gap-2">
+      <CardContent className="flex-grow flex flex-col justify-between">
+        <div>
+          {costValue && (
+            <p className="text-2xl font-bold">
+              {costValue}
+              {costPeriod && <span className="text-sm font-normal text-gray-500">/{costPeriod}</span>}
+            </p>
+          )}
+          {requests && (
+            <p className="text-xs text-gray-500">{requests}</p>
+          )}
+        </div>
+        <div className={cn("flex gap-2", (cost || requests) && "mt-4")}>
           {milestones.map((milestone) => (
             <Badge key={milestone} variant={getMilestoneVariant(milestone)}>
               {milestone}

@@ -25,7 +25,7 @@ const atsIntegrations = [
 ];
 
 const dataIntegrations = [
-  { name: "LinkedIn Scraper (RapidAPI)", icon: Linkedin, milestones: ['V1'] },
+  { name: "LinkedIn Scraper (RapidAPI)", icon: Linkedin, milestones: ['MVP'], cost: "$40.00/mo", requests: "15,000 Requests / Month" },
   { name: "GitHub", icon: Github, milestones: ['V1.1'] },
   { name: "Twitter / X", icon: Twitter, milestones: ['V1.1'] },
 ];
@@ -109,6 +109,8 @@ const Integrations = () => {
                     name={integration.name}
                     Icon={integration.icon}
                     milestones={integration.milestones}
+                    cost={integration.cost}
+                    requests={integration.requests}
                   />
                 ))}
               </div>
