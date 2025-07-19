@@ -12,9 +12,13 @@ const atsIntegrations = [
 ];
 
 const dataIntegrations = [
-  { name: "LinkedIn", icon: Linkedin },
+  { name: "LinkedIn Scraper (RapidAPI)", icon: Linkedin },
   { name: "GitHub", icon: Github },
   { name: "Twitter / X", icon: Twitter },
+];
+
+const automationIntegrations = [
+  { name: "Phantombuster", icon: Bot },
 ];
 
 const aiIntegrations = [
@@ -56,6 +60,19 @@ const Integrations = () => {
           <h2 className="text-2xl font-semibold mb-4">Data & Social</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {dataIntegrations.map((integration) => (
+              <IntegrationCard
+                key={integration.name}
+                name={integration.name}
+                Icon={integration.icon}
+              />
+            ))}
+          </div>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-semibold mb-4">Automation & Outreach</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {automationIntegrations.map((integration) => (
               <IntegrationCard
                 key={integration.name}
                 name={integration.name}
