@@ -83,6 +83,8 @@ const milestones: Milestone[] = [
   },
 ];
 
+const milestoneColors: ("purple" | "sky" | "emerald" | "amber" | "rose")[] = ["purple", "sky", "emerald", "amber", "rose"];
+
 const getIntegrationsForMilestone = (milestoneTitle: string) => {
   const key = milestoneTitle.split(':')[0];
   return allIntegrations.filter(integration => integration.milestones.includes(key));
@@ -90,23 +92,24 @@ const getIntegrationsForMilestone = (milestoneTitle: string) => {
 
 const ProjectPlan = () => {
   return (
-    <div className="flex h-full flex-col bg-white">
-      <header className="p-6 md:p-8 border-b">
-        <h1 className="text-3xl font-bold tracking-tight">
+    <div className="flex h-full flex-col">
+      <header className="p-6 md:p-8 border-b bg-gray-50">
+        <h1 className="text-3xl font-bold tracking-tight text-gray-800">
           Project Roadmap & Goals
         </h1>
         <p className="text-gray-600 mt-2">
-          A strategic overview of our development milestones, target dates, and success metrics.
+          A strategic overview of development milestones, target dates, and success metrics.
         </p>
       </header>
-      <main className="flex-1 overflow-y-auto p-6 md:p-8">
-        {milestones.map(milestone => (
+      <main className="flex-1 overflow-y-auto p-6 md:p-8 bg-gray-100">
+        {milestones.map((milestone, index) => (
           <MilestoneSection
             key={milestone.title}
             title={milestone.title}
             date={milestone.date}
             successMetrics={milestone.successMetrics}
             integrations={getIntegrationsForMilestone(milestone.title)}
+            color={milestoneColors[index % milestoneColors.length]}
           />
         ))}
       </main>
