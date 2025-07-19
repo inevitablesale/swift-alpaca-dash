@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Index from "./pages/Index";
 import AdminLayout from "./components/admin/AdminLayout";
-import AdminIntegrations from "./pages/admin/Integrations";
+import AdminProjectPlan from "./pages/admin/ProjectPlan";
 import AdminDataSchema from "./pages/admin/DataSchema";
 import NotFound from "./pages/NotFound";
 
@@ -21,8 +21,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
           
           <Route path="/admin" element={<AdminLayout />}>
-            <Route index element={<Navigate to="/admin/integrations" replace />} />
-            <Route path="integrations" element={<AdminIntegrations />} />
+            <Route index element={<Navigate to="/admin/project-plan" replace />} />
+            <Route path="project-plan" element={<AdminProjectPlan />} />
             <Route path="data-schema" element={<AdminDataSchema />} />
           </Route>
 

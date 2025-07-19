@@ -72,12 +72,12 @@ allIntegrations.forEach(integration => {
 });
 
 
-const Integrations = () => {
+const ProjectPlan = () => {
   return (
     <div className="flex h-full flex-col bg-white">
       <header className="p-6 md:p-8 border-b">
         <h1 className="text-3xl font-bold tracking-tight">
-          Project Plan & Integrations
+          Project Plan
         </h1>
         <p className="text-gray-600 mt-2">
           A visual roadmap of core architecture and service integrations.
@@ -98,4 +98,4 @@ const Integrations = () => {
   );
 };
 
-export default Integrations;
+export default ProjectPlan;
