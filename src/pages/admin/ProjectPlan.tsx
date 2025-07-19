@@ -52,12 +52,13 @@ const milestones: Milestone[] = [
     ],
   },
   {
-    title: 'V1',
+    title: 'V1: Recruiter Toolkit Foundation',
     date: 'Target: July 29, 2025',
     successMetrics: [
-      'Onboard first 100 recruiters.',
-      'Develop basic recruiter-facing features.',
-      'Establish initial revenue stream.',
+      'Onboard first 10 beta recruiters to gather feedback.',
+      'Recruiters can search the aggregated candidate pool.',
+      'Recruiters can post jobs directly to the platform.',
+      'Validate initial pricing model with the beta group.',
     ],
   },
   {
