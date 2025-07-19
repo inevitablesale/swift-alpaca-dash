@@ -52,13 +52,13 @@ const milestones: Milestone[] = [
     ],
   },
   {
-    title: 'V1: Candidate Intelligence Engine & Recruiter Beta',
+    title: 'V1: Candidate Intelligence Engine - Core Build',
     date: 'Target: July 29, 2025',
     successMetrics: [
       'Successfully integrate People Data Labs to build the core candidate database.',
-      'Onboard first 10 beta recruiters to test and provide feedback on candidate search.',
-      'Beta recruiters can perform effective searches and view detailed candidate profiles.',
-      'Validate initial pricing model with the beta group.',
+      'API Orchestration Layer is functional for querying person and company data.',
+      'Data models for candidates and companies are implemented.',
+      'Basic job posting functionality is live to link data.',
     ],
   },
   {
