@@ -19,7 +19,7 @@ interface Milestone {
 const allIntegrations: Integration[] = [
     { name: "Job Aggregator Engine", icon: Search, milestone: 'MVP', tags: ['Job Sourcing', 'Multi-Platform'] },
     { name: "LinkedIn Scraper (RapidAPI)", icon: Linkedin, milestone: 'MVP', tags: ['Candidate Sourcing'], cost: "$40.00/mo", requests: "15,000 Requests / Month" },
-    { name: "Phantombuster", icon: Send, milestone: 'MVP', tags: ['Candidate Outreach', 'Automation'] },
+    { name: "Phantombuster", icon: Send, milestone: 'MVP', tags: ['Candidate Outreach', 'Automation'], cost: "$69.00/mo", requests: "20h Execution Time / Mo" },
     { name: "Candidate Profile System", icon: Users, milestone: 'V1', tags: ['User Data'] },
     { name: "Candidate Scoring AI (Talent Insights)", icon: BrainCircuit, milestone: 'V1', tags: ['Scoring AI', 'Ranking Engine'] },
     { name: "API Orchestration Layer", icon: GitMerge, milestone: 'V1', tags: ['Backend API'] },
