@@ -1,6 +1,7 @@
 import IntegrationCard from "@/components/admin/IntegrationCard";
 import DataSchemaDialog from "@/components/admin/DataSchemaDialog";
 import PdlSchemaDialog from "@/components/admin/PdlSchemaDialog";
+import PhantombusterDialog from "@/components/admin/PhantombusterDialog";
 import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import { LucideProps } from "lucide-react";
 
@@ -61,6 +62,24 @@ const ProjectPlanColumn = ({ title, integrations }: ProjectPlanColumnProps) => {
                     </div>
                   </DialogTrigger>
                   <PdlSchemaDialog />
+                </Dialog>
+              );
+            }
+            if (integration.name === "Phantombuster") {
+              return (
+                <Dialog key={`${integration.name}-${index}`}>
+                  <DialogTrigger asChild>
+                    <div className="cursor-pointer">
+                      <IntegrationCard
+                        name={integration.name}
+                        Icon={integration.icon}
+                        milestones={integration.milestones}
+                        cost={integration.cost}
+                        requests={integration.requests}
+                      />
+                    </div>
+                  </DialogTrigger>
+                  <PhantombusterDialog />
                 </Dialog>
               );
             }
