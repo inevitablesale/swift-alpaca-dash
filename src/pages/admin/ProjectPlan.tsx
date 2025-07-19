@@ -21,7 +21,7 @@ const coreArchitecture: Integration[] = [
 ];
 
 const dataIntegrations: Integration[] = [
-  { name: "People Data Labs (Companies & People)", icon: Database, milestones: ['MVP'] },
+  { name: "People Data Labs (Companies & People)", icon: Database, milestones: ['V1'], cost: "$1,325.00/mo", requests: "5,000 Credits / month" },
   { name: "LinkedIn Scraper (RapidAPI)", icon: Linkedin, milestones: ['MVP'], cost: "$40.00/mo", requests: "15,000 Requests / Month" },
   { name: "GitHub", icon: Github, milestones: ['V1.2'] },
   { name: "Twitter / X", icon: Twitter, milestones: ['V1.3'] },
