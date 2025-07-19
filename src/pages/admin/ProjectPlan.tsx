@@ -40,7 +40,7 @@ const milestones: Milestone[] = [
     date: 'Target: July 22, 2025',
     successMetrics: [
       'Aggregate jobs from multiple sources to create a comprehensive job feed.',
-      'Use AI (JobGPT) to match candidates with highly relevant job openings.',
+      'Build the core AI matching engine (codename: JobGPT) to connect candidates with relevant job openings.',
       'Drive initial candidate sign-ups to the platform.',
     ],
   },
