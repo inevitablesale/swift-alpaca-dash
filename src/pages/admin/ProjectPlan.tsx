@@ -24,7 +24,7 @@ const allIntegrations: Integration[] = [
     { name: "Candidate Scoring AI (Talent Insights)", icon: BrainCircuit, milestone: 'V1', tags: ['Scoring AI', 'Ranking Engine'] },
     { name: "API Orchestration Layer", icon: GitMerge, milestone: 'V1', tags: ['Backend API'] },
     { name: "People Data Labs", icon: Database, milestone: 'V1.1', tags: ['Data Enrichment'], cost: "$1,325.00/mo", requests: "5,000 Credits / month" },
-    { name: "Recruiter Search (PeopleGPT)", icon: Filter, milestone: 'V1.1', tags: ['Recruiter Tool'] },
+    { name: "Recruiter Search (PeopleGPT)", icon: Filter, milestone: 'V1.1', tags: ['Recruiter Tool', 'Powered by LinkedIn Scraper'] },
     { name: "Usage Tracking & Credit System", icon: CreditCard, milestone: 'V1.1', tags: ['Monetization'] },
     { name: "Email Notification System", icon: Mail, milestone: 'V1.1', tags: ['Notifications'] },
     { name: "Greenhouse", icon: Briefcase, milestone: 'V1.1', tags: ['ATS Integration'] },
@@ -58,7 +58,7 @@ const milestones: Milestone[] = [
     title: 'V1.1: PeopleGPT - Recruiter Toolkit & Monetization',
     date: 'Target: August 5, 2025',
     successMetrics: [
-      'Launch recruiter-facing search (PeopleGPT) to query our proprietary data.',
+      'Launch recruiter-facing search (PeopleGPT) to query for candidates directly using the LinkedIn Scraper API.',
       'Introduce on-demand data enrichment (People Data Labs) as a paid feature.',
       'Onboard first 10 beta recruiters to test and validate the toolkit.',
       'Achieve first paying customers.',
