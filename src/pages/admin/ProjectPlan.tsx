@@ -1,6 +1,5 @@
-import IntegrationCard from "@/components/admin/IntegrationCard";
 import ProjectPlanColumn from "@/components/admin/ProjectPlanColumn";
-import { Briefcase, Linkedin, Github, Bot, Mail, BrainCircuit, Twitter, Users, GitMerge, CreditCard, Shield, LucideProps, Database, FileText } from "lucide-react";
+import { Briefcase, Linkedin, Github, Bot, Mail, BrainCircuit, Twitter, Users, GitMerge, CreditCard, LucideProps, Database, FileText, CheckSquare } from "lucide-react";
 
 interface Integration {
   name: string;
@@ -12,6 +11,7 @@ interface Integration {
 
 const coreArchitecture: Integration[] = [
     { name: "User Registration & Profiles", icon: Users, milestones: ['MVP'] },
+    { name: "Basic Job Application Tracking", icon: CheckSquare, milestones: ['MVP'] },
     { name: "Company Profile System", icon: Briefcase, milestones: ['V1.1'] },
     { name: "Basic Job Posting", icon: FileText, milestones: ['V1'] },
     { name: "API Orchestration Layer", icon: GitMerge, milestones: ['V1'] },
@@ -31,7 +31,7 @@ const aiIntegrations: Integration[] = [
 ];
 
 const automationIntegrations: Integration[] = [
-  { name: "Phantombuster", icon: Bot, milestones: ['MVP'], cost: "$56/mo", requests: "20h/month execution time" },
+  { name: "Phantombuster", icon: Bot, milestones: ['V1'], cost: "$56/mo", requests: "20h/month execution time" },
 ];
 
 const atsIntegrations: Integration[] = [
