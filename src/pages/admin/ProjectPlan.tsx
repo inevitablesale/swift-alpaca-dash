@@ -17,13 +17,13 @@ interface Milestone {
 }
 
 const allIntegrations: Integration[] = [
-    { name: "LinkedIn Scraper (RapidAPI)", icon: Linkedin, milestone: 'MVP', tags: ['Candidate Sourcing'], cost: "$40.00/mo", requests: "15,000 Requests / Month" },
-    { name: "AI Candidate Ranker", icon: Bot, milestone: 'MVP', tags: ['Ranking Engine'] },
+    { name: "Job Aggregator (LinkedIn)", icon: Linkedin, milestone: 'MVP', tags: ['Job Sourcing'], cost: "$40.00/mo", requests: "15,000 Requests / Month" },
+    { name: "People Data Labs", icon: Database, milestone: 'MVP', tags: ['Candidate Sourcing', 'Data Enrichment'], cost: "$1,325.00/mo", requests: "5,000 Credits / month" },
+    { name: "AI Candidate Matcher", icon: Bot, milestone: 'MVP', tags: ['Matching Engine'] },
     { name: "Phantombuster", icon: Send, milestone: 'MVP', tags: ['Candidate Outreach', 'Automation'] },
     { name: "Candidate Profile System", icon: Users, milestone: 'V1', tags: ['User Data'] },
     { name: "Candidate Scoring AI (Talent Insights)", icon: BrainCircuit, milestone: 'V1', tags: ['Scoring AI'] },
     { name: "API Orchestration Layer", icon: GitMerge, milestone: 'V1', tags: ['Backend API'] },
-    { name: "People Data Labs (Enrichment)", icon: Database, milestone: 'V1.1', tags: ['Data Enrichment'], cost: "$1,325.00/mo", requests: "5,000 Credits / month" },
     { name: "Recruiter Search (PeopleGPT)", icon: Filter, milestone: 'V1.1', tags: ['Recruiter Tool'] },
     { name: "Usage Tracking & Credit System", icon: CreditCard, milestone: 'V1.1', tags: ['Monetization'] },
     { name: "Email Notification System", icon: Mail, milestone: 'V1.1', tags: ['Notifications'] },
@@ -37,12 +37,13 @@ const allIntegrations: Integration[] = [
 
 const milestones: Milestone[] = [
   {
-    title: 'MVP: Candidate Sourcing & Outreach Engine',
+    title: 'MVP: Core Job Board & Candidate Matching Engine',
     date: 'Target: July 22, 2025',
     successMetrics: [
-      'Source candidate profiles from LinkedIn based on recruiter search criteria.',
-      'Use a lightweight AI to rank candidates against the ideal profile.',
-      'Automate initial outreach to top-ranked candidates using Phantombuster.',
+      'Aggregate active job listings from LinkedIn into a centralized database.',
+      'For each job, source a list of potential candidates using People Data Labs.',
+      'Use a lightweight AI to match and rank the best candidates for each open role.',
+      'Initiate automated outreach to top candidates, inviting them to the platform.',
     ],
   },
   {
@@ -59,7 +60,7 @@ const milestones: Milestone[] = [
     date: 'Target: August 5, 2025',
     successMetrics: [
       'Launch recruiter-facing search (PeopleGPT) to query our proprietary data.',
-      'Introduce on-demand data enrichment (People Data Labs) as a paid feature.',
+      'Introduce on-demand data enrichment as a paid feature.',
       'Onboard first 10 beta recruiters to test and validate the toolkit.',
       'Achieve first paying customers.',
     ],
