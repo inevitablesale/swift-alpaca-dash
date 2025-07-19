@@ -23,7 +23,7 @@ const allIntegrations: Integration[] = [
     { name: "Candidate Profile System", icon: Users, milestone: 'V1', tags: ['User Data'] },
     { name: "Candidate Scoring AI (Talent Insights)", icon: BrainCircuit, milestone: 'V1', tags: ['Scoring AI', 'Ranking Engine'] },
     { name: "API Orchestration Layer", icon: GitMerge, milestone: 'V1', tags: ['Backend API'] },
-    { name: "People Data Labs", icon: Database, milestone: 'V1.1', tags: ['Data Enrichment'], cost: "$1,325.00/mo", requests: "5,000 Credits / month" },
+    { name: "People Data Labs", icon: Database, milestone: 'V1.1', tags: ['Data Enrichment'], cost: "$0.26", requests: "per contact record" },
     { name: "Recruiter Search (PeopleGPT)", icon: Filter, milestone: 'V1.1', tags: ['Recruiter Tool', 'Powered by LinkedIn Scraper'] },
     { name: "Usage Tracking & Credit System", icon: CreditCard, milestone: 'V1.1', tags: ['Monetization'] },
     { name: "Email Notification System", icon: Mail, milestone: 'V1.1', tags: ['Notifications'] },
