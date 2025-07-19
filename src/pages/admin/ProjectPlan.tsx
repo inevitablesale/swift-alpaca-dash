@@ -14,7 +14,6 @@ const coreArchitecture: Integration[] = [
     { name: "User Registration & Profiles", icon: Users, milestones: ['MVP'] },
     { name: "Company Profile System", icon: Briefcase, milestones: ['MVP'] },
     { name: "Basic Job Posting", icon: FileText, milestones: ['MVP'] },
-    { name: "AI Job Matching (Candidates)", icon: BrainCircuit, milestones: ['MVP'] },
     { name: "Multi-Tenant Structure", icon: Users, milestones: ['MVP'] },
     { name: "Security & Scalability Foundations", icon: Shield, milestones: ['MVP', 'V1'] },
     { name: "API Orchestration Layer", icon: GitMerge, milestones: ['V1'] },
@@ -29,7 +28,7 @@ const dataIntegrations: Integration[] = [
 ];
 
 const aiIntegrations: Integration[] = [
-  { name: "OpenAI", icon: Bot, milestones: ['MVP'] },
+  { name: "AI Job Matching (OpenAI)", icon: Bot, milestones: ['MVP'] },
   { name: "Mistral", icon: BrainCircuit, milestones: ['V1.1'] },
 ];
 
