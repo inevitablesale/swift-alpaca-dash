@@ -5,36 +5,43 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Briefcase, Linkedin, Github, Bot, Mail, BrainCircuit, Twitter } from "lucide-react";
+import { Briefcase, Linkedin, Github, Bot, Mail, BrainCircuit, Twitter, Users, GitMerge, CreditCard, Shield } from "lucide-react";
+
+const coreArchitecture = [
+    { name: "Multi-Tenant Structure", icon: Users, milestones: ['MVP'] },
+    { name: "Security & Scalability Foundations", icon: Shield, milestones: ['MVP', 'V1', 'Future'] },
+    { name: "API Orchestration Layer", icon: GitMerge, milestones: ['V1'] },
+    { name: "Usage Tracking & Credit System", icon: CreditCard, milestones: ['V1'] },
+];
 
 const atsIntegrations = [
-  { name: "Greenhouse", icon: Briefcase },
-  { name: "Lever", icon: Briefcase },
-  { name: "Ashby", icon: Briefcase },
-  { name: "Workable", icon: Briefcase },
-  { name: "SmartRecruiters", icon: Briefcase },
-  { name: "Recruitee", icon: Briefcase },
-  { name: "BreezyHR", icon: Briefcase },
+  { name: "Greenhouse", icon: Briefcase, milestones: ['V1'] },
+  { name: "Lever", icon: Briefcase, milestones: ['V1'] },
+  { name: "Ashby", icon: Briefcase, milestones: ['Future'] },
+  { name: "Workable", icon: Briefcase, milestones: ['Future'] },
+  { name: "SmartRecruiters", icon: Briefcase, milestones: ['Future'] },
+  { name: "Recruitee", icon: Briefcase, milestones: ['Future'] },
+  { name: "BreezyHR", icon: Briefcase, milestones: ['Future'] },
 ];
 
 const dataIntegrations = [
-  { name: "LinkedIn Scraper (RapidAPI)", icon: Linkedin },
-  { name: "GitHub", icon: Github },
-  { name: "Twitter / X", icon: Twitter },
+  { name: "LinkedIn Scraper (RapidAPI)", icon: Linkedin, milestones: ['V1'] },
+  { name: "GitHub", icon: Github, milestones: ['Future'] },
+  { name: "Twitter / X", icon: Twitter, milestones: ['Future'] },
 ];
 
 const automationIntegrations = [
-  { name: "Phantombuster", icon: Bot },
+  { name: "Phantombuster", icon: Bot, milestones: ['V1'] },
 ];
 
 const aiIntegrations = [
-  { name: "OpenAI", icon: Bot },
-  { name: "Mistral", icon: BrainCircuit },
+  { name: "OpenAI", icon: Bot, milestones: ['MVP'] },
+  { name: "Mistral", icon: BrainCircuit, milestones: ['V1'] },
 ];
 
 const productivityIntegrations = [
-  { name: "Google Workspace", icon: Mail },
-  { name: "Microsoft 365", icon: Mail },
+  { name: "Google Workspace", icon: Mail, milestones: ['V1'] },
+  { name: "Microsoft 365", icon: Mail, milestones: ['Future'] },
 ];
 
 const Integrations = () => {
@@ -42,18 +49,36 @@ const Integrations = () => {
     <div className="p-6 md:p-8">
       <header className="mb-8">
         <h1 className="text-3xl font-bold tracking-tight">
-          System Integrations
+          Project Plan & Integrations
         </h1>
         <p className="text-gray-600 mt-2">
-          Manage system-wide API keys and service connections.
+          A visual roadmap of core architecture and service integrations.
         </p>
       </header>
       <main>
         <Accordion
           type="multiple"
-          defaultValue={["ats", "data", "automation", "ai", "productivity"]}
+          defaultValue={["architecture", "ats", "data", "automation", "ai", "productivity"]}
           className="w-full space-y-4"
         >
+          <AccordionItem value="architecture">
+            <AccordionTrigger className="text-2xl font-semibold hover:no-underline">
+              Core Platform Architecture
+            </AccordionTrigger>
+            <AccordionContent>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-4">
+                {coreArchitecture.map((integration) => (
+                  <IntegrationCard
+                    key={integration.name}
+                    name={integration.name}
+                    Icon={integration.icon}
+                    milestones={integration.milestones}
+                  />
+                ))}
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+
           <AccordionItem value="ats">
             <AccordionTrigger className="text-2xl font-semibold hover:no-underline">
               Applicant Tracking Systems (ATS)
@@ -65,6 +90,7 @@ const Integrations = () => {
                     key={integration.name}
                     name={integration.name}
                     Icon={integration.icon}
+                    milestones={integration.milestones}
                   />
                 ))}
               </div>
@@ -82,6 +108,7 @@ const Integrations = () => {
                     key={integration.name}
                     name={integration.name}
                     Icon={integration.icon}
+                    milestones={integration.milestones}
                   />
                 ))}
               </div>
@@ -99,6 +126,7 @@ const Integrations = () => {
                     key={integration.name}
                     name={integration.name}
                     Icon={integration.icon}
+                    milestones={integration.milestones}
                   />
                 ))}
               </div>
@@ -116,6 +144,7 @@ const Integrations = () => {
                     key={integration.name}
                     name={integration.name}
                     Icon={integration.icon}
+                    milestones={integration.milestones}
                   />
                 ))}
               </div>
@@ -133,6 +162,7 @@ const Integrations = () => {
                     key={integration.name}
                     name={integration.name}
                     Icon={integration.icon}
+                    milestones={integration.milestones}
                   />
                 ))}
               </div>

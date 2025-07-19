@@ -7,13 +7,28 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { LucideProps } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface IntegrationCardProps {
   name: string;
   Icon: React.ComponentType<LucideProps>;
+  milestones?: string[];
 }
 
-const IntegrationCard = ({ name, Icon }: IntegrationCardProps) => {
+const getMilestoneVariant = (milestone: string): "default" | "secondary" | "outline" | "destructive" => {
+  switch (milestone.toLowerCase()) {
+    case 'mvp':
+      return 'default';
+    case 'v1':
+      return 'secondary';
+    case 'future':
+      return 'outline';
+    default:
+      return 'outline';
+  }
+};
+
+const IntegrationCard = ({ name, Icon, milestones = [] }: IntegrationCardProps) => {
   return (
     <Card className="flex flex-col">
       <CardHeader className="flex flex-row items-center justify-between pb-2">
@@ -21,7 +36,17 @@ const IntegrationCard = ({ name, Icon }: IntegrationCardProps) => {
         <Icon className="h-6 w-6 text-gray-400" />
       </CardHeader>
       <CardContent className="flex-grow flex items-end">
-        <Badge variant="outline">Coming Soon</Badge>
+        <div className="flex gap-2">
+          {milestones.length > 0 ? (
+            milestones.map((milestone) => (
+              <Badge key={milestone} variant={getMilestoneVariant(milestone)}>
+                {milestone}
+              </Badge>
+            ))
+          ) : (
+            <Badge variant="outline">Coming Soon</Badge>
+          )}
+        </div>
       </CardContent>
     </Card>
   );
